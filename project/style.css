@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    font-family: "Cardo", serif;
+    background-color: #f0f0f0; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*counter */
+
+.header {
+    position: relative;
+    width: 100%;
+    background-color: #000000; 
+    padding: 20px;
+}
+
+.header-counter-section {
+    padding: 20px 0;
+    background-color: black; 
+    text-align: center;
+    width: 100%;
+}
+
+.counter-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.counter-box {
+    background: transparent; 
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: none; 
+    text-align: center;
+}
+
+.counter-box h2 {
+    font-size: 48px;
+    color: #ffffff; 
+    margin: 0;
+}
+
+.counter-box p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.counter {
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.chart-box {
+    width: 100%;
+    max-width: 600px; 
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 767px) {
+    .counter-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .counter-box h2 {
+        font-size: 36px;
+    }
+}
+.timeline::before.scrolled {
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+
+/*title section*/
+.timeline_container {
+    width: 100vw; 
+    position: relative;
+    padding: 80px 0; 
+    margin-bottom: 80px;
+    overflow-x: hidden; 
+}
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timeline-header_title {
+    color: black;
+    font-size: 46px;
+    font-family: "Cardo", serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+.timeline-header_subtitle {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin: 10px 0 0 0;
+    font-weight: normal;
+}
+
+/*line*/
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: rgba(163, 162, 162, 0.284);
+    transition: background 0.5s ease;
+}
+
+.timeline.dark::before {
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+/*only year and name*/
+
+.timeline-content {
+    width: 45vw; 
+    padding: 20px; 
+    color: #333;
+    box-shadow: none;
+    z-index: 1;
+    background: transparent; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.timeline-content h2{
+    color:rgba(138, 3, 3, 0.697);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    margin-bottom: 300px;
+    margin-left:400px ;
+
+}
+
+.timeline-content h1{
+    color:rgba(138, 3, 3, 0.697);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    margin-bottom: 300px;
+    margin-right:400px ;
+
+}
+.timeline-content p{
+    color:black;
+    font-size: 21px;
+    margin-top: -225px;
+}
+
+
+
+
+
+
+.timeline-content-desc {
+    font-size: 20px;
+    font-family: "Cardo", serif;
+    color: #555;
+}
+
+
+/*footer*/
+
+.demo-footer {
+    padding: 60px 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: "Cardo", serif;
+}
+
+.demo-footer h3,
+.demo-footer p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* General timeline styling */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* For odd timeline items */
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse; 
+}
+
+/* Timeline content */
+.timeline-content {
+    width: 600px; 
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 20px;
+    border-top:0 ;
+    padding-top: 0;
+    margin-top: 0;
+    font-family: "Cardo", serif;
+}
+
+
+
+.timeline_content-title{
+    font-size: 20px;
+    font-family: "Cardo", serif;
+
+}
+
+.timeline-content-desc {
+    font-size: 20px;
+    font-family: "Cardo", serif;
+
+}
+
+/* Timeline image */
+.timeline-img {
+    width: 60%; 
+    height: auto;
+    margin: 0 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+    background: transparent; 
+    box-shadow: none; 
+
+    justify-content: center;
+}
+
+.timeline-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Make the content fade in when active */
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .timeline-content {
+        width: 500px; 
+        font-size: 18px; 
+    }
+    
+    .timeline-img {
+        width: auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        width: auto; 
+    }
+    
+    .timeline-item {
+        flex-direction: column; 
+        align-items: center;
+        margin-bottom: 80px;
+    }
+
+    .timeline-item:nth-child(odd) {
+        flex-direction: column; 
+    }
+    
+    .timeline-content {
+        width: auto; 
+        margin: 0 0 20px; 
+        font-size: 16px; 
+    }
+
+    .timeline-img {
+        width: auto; 
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-content {
+        font-size: 14px; 
+    }
+    
+    .timeline-img {
+        width: auto; 
+    }
+}
