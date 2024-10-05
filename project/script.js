@@ -36,16 +36,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const timeline = document.querySelector('.timeline');
     const items = document.querySelectorAll('.timeline-item');
 
-    const throttle = (func, limit) => {
-        let inThrottle;
+    const throttle = (func) => {
+        let ticking = false;
         return function() {
-            if (!inThrottle) {
-                func.apply(this, arguments);
-                inThrottle = true;
-                setTimeout(() => inThrottle = false, limit);
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    func();
+                    ticking = false;
+                });
+                ticking = true;
             }
         };
     };
+    
 
     const activateTimelineItems = () => {
         const triggerBottom = window.innerHeight * 0.8;
@@ -74,5 +77,5 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', throttle(() => {
         activateTimelineItems();
         darkenTimelineLine();
-    }, 100)); 
+    }, 50)); 
 });
