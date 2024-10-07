@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    font-family: "Cardo", serif;
+    background-color: #f0f0f0; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Counter Section */
+.header-counter-section {
+    padding: 20px 0;
+    background-color: black; 
+    text-align: center;
+    width: 100%;
+}
+
+.counter-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+    padding: 20px;
+}
+
+.counter-box p {
+    font-family: "Cardo", serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.counter {
+    font-size: 3rem;
+    color: white;
+}
+
+@media only screen and (max-width: 767px) {
+    .counter-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .counter-box h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Title Section */
+.timeline_container {
+    width: 100vw; 
+    position: relative;
+    padding: 80px 0; 
+    margin-bottom: 80px;
+    overflow-x: hidden; 
+}
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timeline-header_title {
+    color: black;
+    font-size: 3.5vw;
+    font-family: "Cardo", serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+.timeline-header_subtitle {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2vw;
+    letter-spacing: 5px;
+    margin: 10px 0 0 0;
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 768px) {
+    .timeline-header_title {
+        font-size: 6vw; 
+    }
+
+    .timeline-header_subtitle {
+        font-size: 3vw;
+    }
+
+    .timeline_container {
+        padding: 40px 0; 
+    }
+}
+
+/* Timeline Line */
+.timeline {
+    position: relative;
+    width: 100%;
+}
+
+.timeline-line {
+    position: absolute;
+    margin-bottom: -100px;
+    left: 50%; 
+    width: 2px;
+    top: 0;
+    background-color: black;
+    height: 0;
+    transition: height 1.5s ease, background-color 1.5s ease;
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 10%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-line {
+        left: 5%; 
+    }
+}
+
+
+/* Timeline Content */
+.timeline-content {
+    width: 80vw; 
+    max-width: 550px; 
+    padding: 2vw; 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-content h2{
+    color: rgba(138, 3, 3, 0.697);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4vw; 
+    text-align: center;
+} 
+
+.timeline-content h1 {
+    color: rgba(138, 3, 3, 0.697);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4vw; 
+    text-align: center;
+}
+
+.timeline-content p {
+    color: black;
+    font-size: 1.2rem; 
+    margin: 4vw; 
+    margin-top: -1%;
+}
+
+.timeline-content-desc {
+    font-size: 1rem; 
+    font-family: "Cardo", serif;
+    color: #555;
+}
+
+@media only screen and (max-width: 1024px) {
+    .timeline-content {
+        width: 100%; 
+        padding: 3vw;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-content {
+        width: 90vw; 
+        padding: 3vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-content h2, .timeline-content h1 {
+        font-size: 5vw; 
+    }
+
+    .timeline-content p {
+        font-size: 1rem; 
+    }
+
+    .timeline-img img {
+        width: 100%; 
+    }
+}
+
+/* General Timeline Styling */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px; 
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+
+/* For odd timeline items */
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse; 
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row; 
+}
+
+@media (max-width: 768px) {
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+
+
+/* Timeline Image */
+.timeline-img {
+    width: 75%; 
+    height: 75%; 
+    max-width:100vh; 
+    border-radius: 8px;
+    object-fit: cover; 
+}
+
+.timeline-img img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: inherit; 
+}
+
+@media only screen and (max-width: 768px) {
+    .timeline-img {
+        max-width: 90%; 
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .timeline-img {
+        max-width: 90%; 
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .timeline-img {
+        max-width: 100%; 
+    }
+}
+
+/* Make the content fade in when active */
+.timeline-item {
+    opacity: 0;
+    will-change: opacity 0.6s , transform 1s;
+    transform: translateY(50px); 
+    transition: opacity 1s ease-in-out, transform 1.2s ease-in-out;
+}
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/*footer*/
+.demo-footer {
+    padding: 60px 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: "Cardo", serif;
+}
+
+.demo-footer h3,
+.demo-footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
