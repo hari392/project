@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    font-family: "Cardo", serif;
+    background-color: #f0f0f0; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Counter Section */
+.header-counter-section {
+    padding: 20px 0;
+    background-color: black; 
+    text-align: center;
+    width: 100%;
+}
+
+.counter-box {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+ /*plus symbol*/
+.plus-symbol {      
+    font-size: 2.5rem;
+    color: red; 
+    position: absolute;
+    top: 0;
+    right: -20px; 
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    gap: 65px; 
+    padding: 20px;
+}
+
+.counter-box p {
+    font-family: "Cardo", serif;
+    font-size: 1.5rem;
+    padding: -10px;
+    margin: -10px;
+    color: white;
+}
+
+.counter {
+    font-size: 3rem;
+    color: white;
+    
+}
+
+/*counter responsiveness*/
+
+@media only screen and (max-width: 767px) {
+    .counter-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .counter-box h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Title Section */
+
+.timeline_container {
+    width: 100vw; 
+    position: relative;
+    padding: 80px 0; 
+    margin-bottom: 80px;
+    overflow-x: hidden; 
+}
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timeline-header_title {
+    color: black;
+    font-size: 3.5vw;
+    font-family: "Cardo", serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+.timeline-header_subtitle {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2vw;
+    letter-spacing: 5px;
+    margin: 10px 0 0 0;
+    font-weight: normal;
+}
+
+/*title header responsiveness*/
+
+@media only screen and (max-width: 768px) {
+    .timeline-header_title {
+        font-size: 6vw; 
+    }
+
+    .timeline-header_subtitle {
+        font-size: 3vw;
+    }
+
+    .timeline_container {
+        padding: 40px 0; 
+    }
+}
+
+/* vertical timeline */
+.timeline {
+    position: relative;
+    width: 100%;
+}
+
+.timeline-line {
+    position: absolute;
+    margin-bottom: -100px;
+    left: 50%; 
+    width: 2px;
+    top: 0;
+    background-color: black;
+    height: 0;
+    transition: height 1.5s ease, background-color 1.5s ease;
+}
+
+/* vertical timeline responsiveness */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 10%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-line {
+        left: 5%; 
+    }
+}
+
+/* Timeline Content */
+
+.timeline-content {
+    width: 80vw; 
+    max-width: 550px; 
+    padding: 2vw; 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* For left-side headers */
+.timeline-content h2 {
+    color: rgba(138, 3, 3, 0.697);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4vw;
+    text-align: center;
+    margin-right: -100%;
+    position: relative;
+}
+
+/* For right-side headers */
+.timeline-content h1 {
+    color: rgba(138, 3, 3, 0.697);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4vw;
+    text-align: center;
+    margin-left: -105%;
+    position: relative;
+}
+
+/* For left-side content */
+.timeline-content p1 {
+    color: black;
+    font-size: 1.2rem;
+    margin: 4vw;
+    margin-top: -40%;
+    margin-right: -4.5vw;
+}
+
+/* For right-side content */
+.timeline-content p2 {
+    color: black;
+    font-size: 1.2rem;
+    margin: 4vw;
+    margin-top: -35%;
+    margin-left: -4.5vw;
+}
+
+/*dummy text*/
+
+.text{
+    font-size: black;
+    font-size: 1.5rem;
+}
+
+.timeline-item:nth-child(odd) .text {
+    margin-right: -500px; 
+    margin-top: -10px;
+    margin-bottom: 240px;
+}
+
+
+.timeline-item:nth-child(even) .text {
+    margin-left: -540px; 
+    margin-top: -10px;
+    margin-bottom: 220px;
+}
+
+/*content desc*/
+.timeline-content-desc {
+    font-size: 1rem;
+    font-family: "Cardo", serif;
+    color: #555;
+    text-align: center;
+}
+
+.timeline-item:nth-child(odd) .timeline-content-desc{
+    margin-left: -250px;
+
+}
+.timeline-item:nth-child(even) .timeline-content-desc {
+    margin-right: -250px;
+}
+
+/*timeline content responsivness*/
+
+ @media only screen and (max-width: 1024px) {
+    .timeline-content {
+        width: 35vw;
+    }
+    .timeline-content h1{
+        font-size: 3.5vw;
+        margin-right: 0;
+        margin-bottom: 35px;
+
+    }
+    .timeline-content h2 {
+        font-size: 3.5vw;
+        margin-left: 0;
+        margin-bottom: 35px;
+      
+    }
+    .timeline-content p1{
+        font-size: 1.5rem;
+        padding: auto;
+        margin-left: 3.5vw;
+        margin-top: -60%;
+    }
+
+    .timeline-content p2 {
+        font-size: 1.5rem;
+        padding: auto;
+        margin-right: 3.5vw;
+        margin-top: -60%;
+    }
+
+    .timeline-item:nth-child(odd) .text{
+        margin-left: -220px;
+        margin-bottom: 240px;
+    }
+    .timeline-item:nth-child(even) .text {
+        margin-right: -235px;
+        margin-bottom: 240px;
+
+}
+.timeline-content-desc{
+    font-size: 1.3rem;
+}
+}
+  
+@media only screen and (max-width: 768px) {
+    .timeline-content {
+        width: 90vw;         
+        max-width: 100%;
+        padding: 2vw;  
+        margin-left: 5vw; 
+        box-sizing: border-box;  
+    }
+
+    .timeline-content h2{
+        font-size: 6vw;      
+        margin-right: 0;           
+        text-align: center; 
+    }.timeline-content h1 {
+        font-size: 6vw;      
+        margin-left: 0;           
+        text-align: center; 
+    } 
+
+    .timeline-content p1{
+        font-size: 1.4rem;
+        margin-left: 0;
+        margin-top: -10%;
+        text-align: left; 
+        padding: 10%;
+    } 
+    
+    .timeline-content p2 {
+        font-size: 1.4rem;
+        margin-left: 0;
+        margin-top: -10%;
+        text-align: left; 
+        padding: 10%;
+    }
+
+    .timeline-item:nth-child(odd) .text{
+        margin-right: -35%;
+        text-align: center; 
+        margin-bottom: 20px;
+    } 
+    .timeline-item:nth-child(even) .text {
+        margin-left: -35%;
+        text-align: center; 
+        margin-bottom: 20px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content-desc{
+        margin-left: 0;
+        text-align: left;
+        font-size: 1.2rem;
+    } 
+    .timeline-item:nth-child(even) .timeline-content-desc {
+        margin-right: 0;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .timeline-item:nth-child(odd) .text{
+        margin-right: -200px;
+        text-align: center; 
+        margin-bottom: 20px;
+    } 
+    .timeline-item:nth-child(even) .text {
+        margin-left: -220px;
+        text-align: center; 
+        margin-bottom: 20px;
+    }
+
+
+}
+
+
+/* General Timeline Styling odd and even */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px; 
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse; 
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row; 
+}
+
+@media (max-width: 768px) {
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+
+
+/* Timeline Image */
+.timeline-img {
+    width: 75%; 
+    height: auto; 
+    max-width:100vh; 
+    border-radius: 8px 
+}
+
+.timeline-img img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: inherit; 
+    
+} 
+
+/* odd-positioned items */
+.timeline-item:nth-child(odd) .timeline-img {
+    float: left;  
+    margin-right: 250px; 
+  }
+  
+  /*  even-positioned items */
+  .timeline-item:nth-child(even) .timeline-img {
+    float: right;  
+    margin-left: 260px; 
+  }
+  
+  /* Responsive adjustments */
+  @media only screen and (max-width: 1024px) {
+    .timeline-item:nth-child(odd) .timeline-img{
+        margin-left: 35px;
+        
+    }
+
+    .timeline-item:nth-child(even) .timeline-img {
+      margin-right: 35px;
+    }
+    .timeline-img {
+        max-width: 90%;
+    }
+  }
+
+@media only screen and (max-width: 768px) {
+    .timeline-item:nth-child(odd) .timeline-img{
+        margin-right: 35px;  
+    }
+    .timeline-item:nth-child(even) .timeline-img {
+        margin-left: 35px;
+      }
+}
+
+@media only screen and (max-width: 480px) {
+    .timeline-img {
+        max-width: 100%; 
+        margin: 0 auto;
+    }
+}
+
+/* Make the content fade in when active */
+.timeline-item {
+    opacity: 0;
+    will-change: opacity 0.6s , transform 1s;
+    transform: translateY(50px); 
+    transition: opacity 1s ease-in-out, transform 1.2s ease-in-out;
+}
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/*footer*/
+.demo-footer {
+    padding: 60px 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: "Cardo", serif;
+}
+
+.demo-footer h3,
+.demo-footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
