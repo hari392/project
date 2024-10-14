@@ -190,6 +190,8 @@ body {
 @media (max-width: 768px) {
     .timeline-content {
         width: 90vw; 
+        align-items: center; 
+        margin-left: 15px;
     }
 }
 
@@ -197,6 +199,7 @@ body {
     .timeline-content  {
         width: 75%;
         margin-left:15px;
+        align-items: center; 
     }
 }
 
@@ -251,7 +254,8 @@ body {
 
 @media only screen and (max-width: 768px) {
     .timeline-content img {
-        max-width: 80%; 
+        max-width: 80%;
+        align-items: center; 
     }
 }
 
@@ -263,7 +267,8 @@ body {
 
 @media only screen and (max-width: 480px) {
     .timeline-content img {
-        max-width: 70%; 
+        max-width: 70%;
+        align-items: center;  
     }
 }
 
