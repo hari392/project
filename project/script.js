@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const maxHeight = timeline.scrollHeight;
         const newHeight = (scrolledPercentage / 100) * maxHeight;
-        timelineLine.style.height = `${newHeight}px`;
+        timelineLine.style.height = `${newHeight+100}px`; //here we can change the height of the timeline//
     };
 
 
