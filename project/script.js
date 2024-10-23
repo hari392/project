@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     };
+    
 
     const updateTimelineLine = () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
@@ -127,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const maxHeight = timeline.scrollHeight;
         const newHeight = (scrolledPercentage / 100) * maxHeight;
-        timelineLine.style.height = `${newHeight+100}px`; //here we can change the height of the timeline//
+        timelineLine.style.height = `${newHeight+100}px`; //here we can change the height//
     };
 
 
@@ -144,5 +145,5 @@ document.addEventListener('DOMContentLoaded', function() {
         activateTimelineItems();
         updateTimelineLine();
         darkenTimelineLine();
-    }, 5)); 
+    },5)); 
 });
