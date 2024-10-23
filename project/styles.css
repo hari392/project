@@ -120,7 +120,7 @@ body {
     width: 2px;
     top: 0;
     background-color: black;
-    height: 0;
+    height:0;
     transition: height 0.5s ease, background-color 0.5s ease;
 }
 
@@ -206,7 +206,7 @@ body {
 /* General Timeline Styling */
 .timeline-container {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     width: 100%;
 }
 
@@ -222,7 +222,7 @@ body {
 
 /* For odd timeline items */
 .timeline-item:nth-child(odd) {
-    flex-direction: row-reverse; 
+    flex-direction:row-reverse; 
 }
 
 .timeline-item:nth-child(even) {
@@ -245,17 +245,13 @@ body {
     flex-shrink: 0;
     object-fit:contain; 
     border-radius: 7px;
-    marging: auto;
+    margin: auto;
 }
 
-.timeline-content img img {
-    width: 80%; 
-    height: auto; 
-}
 
 @media only screen and (max-width: 768px) {
     .timeline-content img {
-        max-width: 80%;
+        max-width: 80%; 
         align-items: center; 
     }
 }
