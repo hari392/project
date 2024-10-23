@@ -245,6 +245,7 @@ body {
     flex-shrink: 0;
     object-fit:contain; 
     border-radius: 7px;
+    marging: auto;
 }
 
 .timeline-content img img {
